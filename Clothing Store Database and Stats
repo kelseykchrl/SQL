@@ -27,5 +27,5 @@ INSERT INTO clothes VALUES
 --Display the data base ordered by price.
 SELECT * FROM clothes ORDER BY price asc;
 
---I need to reorder once my on hand amount are at 5 items. Which items have 5 or less in stock?
+--I need to reorder once my on hand amount are at 5 items or less. Which items have 5 or less in stock?
 SELECT id, name, on_hand FROM clothes WHERE on_hand <=5;
