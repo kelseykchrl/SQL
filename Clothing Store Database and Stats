@@ -1,0 +1,31 @@
+ --Create a clothing store database
+  
+CREATE TABLE clothes 
+(id integer primary key,
+name text, 
+price integer, 
+on_hand integer,
+number_sold integer);
+
+INSERT INTO clothes VALUES
+(1, "socks", 10.75, 14, 3),
+(2, "bra", 25.99, 4, 10),
+(3, "shoes", 50.49, 3, 7),
+(4, "pink shirt", 6.99, 8, 9),
+(5, "red shirt", 6.99, 3, 15),
+(6, "black shirt", 6.99,2, 25),
+(7, "grey shirt", 6.99, 7, 20),
+(8, "white shirt", 6.99, 0, 25),
+(9, "green shirt", 6.99, 10, 4),
+(10, "underwear", 10.49, 9, 21),
+(11, "shorts", 20.79, 5, 20),
+(12, "pants", 35.99, 8, 10),
+(13, "dress pants", 40.49, 3, 15),
+(14, "jeans", 30.99, 8, 20),
+(15, "belt", 12.99, 3, 10);
+
+--Display the data base ordered by price.
+SELECT * FROM clothes ORDER BY price asc;
+
+--I need to reorder once my on hand amount are at 5 items. Which items have 5 or less in stock?
+SELECT id, name, on_hand FROM clothes WHERE on_hand <=5;
